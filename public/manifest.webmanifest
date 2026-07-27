@@ -1,0 +1,16 @@
+{
+  "name": "Sky Dial",
+  "short_name": "Sky Dial",
+  "description": "日本語のBlueskyカスタムフィードを、目的から3件へ絞る。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e9edf5",
+  "theme_color": "#172343",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

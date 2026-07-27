@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sky-dial.yusuke8h.workers.dev/sitemap.xml

@@ -1,0 +1,1171 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter,
+    "Noto Sans JP",
+    "Yu Gothic UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #172038;
+  background: #e9edf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 6%, rgb(90 120 230 / 10%), transparent 26rem),
+    linear-gradient(#f4f6fb, #e9edf5);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 20;
+  padding: 0.75rem 1rem;
+  color: white;
+  background: #11182c;
+  transform: translateY(-110%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header,
+footer,
+main {
+  width: min(92rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header,
+.site-header nav,
+.brand,
+.saved-link,
+footer,
+.panel-head,
+.panel-head > div,
+.feed-copy header,
+.feed-copy footer,
+.feed-meta,
+.saved-card {
+  display: flex;
+  align-items: center;
+}
+
+.site-header {
+  min-height: 4rem;
+  justify-content: space-between;
+}
+
+.brand {
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  background: #2f5fe4;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px rgb(47 95 228 / 12%),
+    inset 0 0 0 1px rgb(255 255 255 / 30%);
+}
+
+.brand-mark::before,
+.brand-mark::after,
+.brand-mark i {
+  position: absolute;
+  width: 0.3rem;
+  height: 0.3rem;
+  content: "";
+  background: white;
+  border-radius: 50%;
+}
+
+.brand-mark::before {
+  transform: translate(-0.42rem, 0.16rem);
+}
+
+.brand-mark::after {
+  transform: translate(0.42rem, -0.2rem);
+}
+
+.brand-mark i {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.site-header nav {
+  gap: 1rem;
+  color: #66708a;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.site-header nav a {
+  text-decoration: none;
+}
+
+.saved-link {
+  min-height: 2.3rem;
+  padding: 0.45rem 0.75rem;
+  gap: 0.45rem;
+  color: #172038;
+  background: white;
+  border: 1px solid #d9deea;
+  border-radius: 999px;
+  box-shadow: 0 0.3rem 1rem rgb(25 37 69 / 5%);
+}
+
+.saved-link output {
+  display: grid;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding-inline: 0.3rem;
+  place-items: center;
+  color: white;
+  background: #2f5fe4;
+  border-radius: 999px;
+  font-size: 0.65rem;
+}
+
+.dial-workbench {
+  display: grid;
+  overflow: hidden;
+  min-height: min(47rem, calc(100vh - 7rem));
+  margin-bottom: 3rem;
+  background: white;
+  border: 1px solid rgb(23 32 56 / 10%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1.5rem 4rem rgb(25 37 69 / 10%);
+  grid-template-columns: minmax(19rem, 0.86fr) minmax(25rem, 1.38fr) minmax(15rem, 0.72fr);
+}
+
+.dial-panel,
+.result-panel,
+.saved-panel {
+  min-width: 0;
+  padding: clamp(1.1rem, 2vw, 1.7rem);
+}
+
+.dial-panel {
+  color: #f7f9ff;
+  background:
+    radial-gradient(circle at 50% 44%, rgb(100 137 255 / 23%), transparent 13rem),
+    linear-gradient(145deg, #172343, #11182c 72%);
+}
+
+.result-panel {
+  background:
+    linear-gradient(rgb(255 255 255 / 85%), rgb(255 255 255 / 85%)),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgb(30 53 112 / 5%) 32px);
+  border-right: 1px solid #e3e7f0;
+}
+
+.saved-panel {
+  background: #f5f6fa;
+}
+
+.panel-head {
+  min-height: 2.4rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.panel-head > div {
+  gap: 0.65rem;
+}
+
+.step-mark {
+  color: #8390ad;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.6rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.dial-panel .step-mark {
+  color: #7f9eff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.035em;
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.text-button {
+  padding: 0.3rem 0;
+  color: #97a4c5;
+  background: transparent;
+  border: 0;
+  font-size: 0.7rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  color: white;
+}
+
+.category-dial {
+  position: relative;
+  width: min(21rem, 100%);
+  aspect-ratio: 1;
+  margin: clamp(1.5rem, 4vh, 3rem) auto 1.6rem;
+}
+
+.dial-rings,
+.dial-rings::before,
+.dial-rings::after {
+  position: absolute;
+  inset: 50%;
+  border: 1px solid rgb(134 160 255 / 18%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dial-rings {
+  width: 69%;
+  height: 69%;
+  box-shadow:
+    0 0 0 1.3rem rgb(82 111 210 / 3%),
+    0 0 4rem rgb(61 99 229 / 9%);
+}
+
+.dial-rings::before {
+  width: 67%;
+  height: 67%;
+  content: "";
+}
+
+.dial-rings::after {
+  width: 16%;
+  height: 16%;
+  content: "";
+  background: rgb(113 146 255 / 8%);
+}
+
+.dial-rings i {
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  width: 0.46rem;
+  height: 0.46rem;
+  background: #6e90ff;
+  border-radius: 50%;
+  box-shadow: 0 0 1.2rem #6e90ff;
+  transform: translateX(-50%);
+}
+
+.dial-choice,
+.dial-center {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  color: #cdd6ef;
+  background: #202d50;
+  border: 1px solid rgb(155 177 247 / 16%);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.dial-choice {
+  width: 4.25rem;
+  min-height: 3rem;
+  padding: 0.35rem 0.2rem;
+  border-radius: 0.75rem;
+  transform: translate(-50%, -50%);
+}
+
+.dial-choice[data-angle="0"] {
+  top: 7%;
+  left: 50%;
+}
+
+.dial-choice[data-angle="36"] {
+  top: 15%;
+  left: 75%;
+}
+
+.dial-choice[data-angle="72"] {
+  top: 37%;
+  left: 91%;
+}
+
+.dial-choice[data-angle="108"] {
+  top: 63%;
+  left: 91%;
+}
+
+.dial-choice[data-angle="144"] {
+  top: 85%;
+  left: 75%;
+}
+
+.dial-choice[data-angle="180"] {
+  top: 93%;
+  left: 50%;
+}
+
+.dial-choice[data-angle="216"] {
+  top: 85%;
+  left: 25%;
+}
+
+.dial-choice[data-angle="252"] {
+  top: 63%;
+  left: 9%;
+}
+
+.dial-choice[data-angle="288"] {
+  top: 37%;
+  left: 9%;
+}
+
+.dial-choice[data-angle="324"] {
+  top: 15%;
+  left: 25%;
+}
+
+.dial-choice span {
+  color: #7f9eff;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.dial-choice b,
+.dial-center b {
+  font-size: 0.63rem;
+  font-weight: 750;
+}
+
+.dial-choice:hover {
+  color: white;
+  background: #2a3b68;
+  border-color: #6f91ff;
+}
+
+.dial-choice[data-selected="true"] {
+  color: #132044;
+  background: #8ca8ff;
+  border-color: #aac0ff;
+  box-shadow: 0 0.8rem 2rem rgb(76 115 244 / 26%);
+}
+
+.dial-choice[data-selected="true"] span {
+  color: #183475;
+}
+
+.dial-center {
+  inset: 50% auto auto 50%;
+  width: 5rem;
+  height: 5rem;
+  background: #223158;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dial-center span {
+  color: #7f9eff;
+  font-size: 1.15rem;
+}
+
+.dial-center[data-selected="true"] {
+  color: #142044;
+  background: #eef3ff;
+  border-color: white;
+  box-shadow:
+    0 0 0 0.45rem rgb(112 145 255 / 11%),
+    0 1rem 2.4rem rgb(2 8 26 / 25%);
+}
+
+.search-box {
+  display: grid;
+  min-height: 3rem;
+  padding: 0.3rem 0.45rem 0.3rem 0.85rem;
+  align-items: center;
+  background: rgb(255 255 255 / 8%);
+  border: 1px solid rgb(173 190 241 / 18%);
+  border-radius: 0.85rem;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+}
+
+.search-box i {
+  position: relative;
+  width: 0.78rem;
+  height: 0.78rem;
+  border: 1.5px solid #8fa1ca;
+  border-radius: 50%;
+}
+
+.search-box i::after {
+  position: absolute;
+  right: -0.27rem;
+  bottom: -0.17rem;
+  width: 0.35rem;
+  height: 1.5px;
+  content: "";
+  background: #8fa1ca;
+  transform: rotate(45deg);
+}
+
+.search-box input {
+  min-width: 0;
+  color: white;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 0.82rem;
+}
+
+.search-box input::placeholder {
+  color: #8e9ab8;
+}
+
+.search-box kbd {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  color: #b7c5eb;
+  background: #29375d;
+  border: 1px solid rgb(173 190 241 / 16%);
+  border-radius: 0.45rem;
+  font-size: 0.68rem;
+  box-shadow: inset 0 -2px rgb(8 15 33 / 28%);
+}
+
+.results-head {
+  margin-bottom: 1.35rem;
+}
+
+.result-state {
+  display: grid !important;
+  justify-items: end;
+  gap: 0.15rem !important;
+}
+
+.result-state output {
+  color: #2f5fe4;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.result-state span {
+  color: #8791a9;
+  font-size: 0.63rem;
+}
+
+.feed-stack {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.feed-card {
+  --feed-accent: #3766e8;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  min-height: 10.9rem;
+  padding: 1.1rem;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e0e5ef;
+  border-radius: 1rem;
+  box-shadow: 0 0.55rem 1.4rem rgb(29 42 76 / 6%);
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: 1.05rem;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.feed-card[data-category="japanese"],
+.saved-card[data-category="japanese"] {
+  --feed-accent: #3766e8;
+}
+
+.feed-card[data-category="illustration"],
+.saved-card[data-category="illustration"] {
+  --feed-accent: #e44f78;
+}
+
+.feed-card[data-category="news"],
+.saved-card[data-category="news"] {
+  --feed-accent: #e9553b;
+}
+
+.feed-card[data-category="tech"],
+.saved-card[data-category="tech"] {
+  --feed-accent: #12a887;
+}
+
+.feed-card[data-category="photo"],
+.saved-card[data-category="photo"] {
+  --feed-accent: #2587b8;
+}
+
+.feed-card[data-category="books"],
+.saved-card[data-category="books"] {
+  --feed-accent: #8b61c2;
+}
+
+.feed-card[data-category="animals"],
+.saved-card[data-category="animals"] {
+  --feed-accent: #e19a31;
+}
+
+.feed-card[data-category="food"],
+.saved-card[data-category="food"] {
+  --feed-accent: #78a835;
+}
+
+.feed-card[data-category="music"],
+.saved-card[data-category="music"] {
+  --feed-accent: #b84f95;
+}
+
+.feed-card[data-category="creation"],
+.saved-card[data-category="creation"] {
+  --feed-accent: #e06b55;
+}
+
+.feed-card:hover {
+  border-color: color-mix(in srgb, var(--feed-accent), white 55%);
+  box-shadow: 0 0.9rem 2rem rgb(29 42 76 / 10%);
+  transform: translateY(-2px);
+}
+
+.feed-orbit {
+  position: relative;
+  display: grid;
+  align-self: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  place-items: center;
+  background: color-mix(in srgb, var(--feed-accent), white 87%);
+  border: 1px solid color-mix(in srgb, var(--feed-accent), white 65%);
+  border-radius: 50%;
+}
+
+.feed-orbit::before,
+.feed-orbit::after {
+  position: absolute;
+  content: "";
+  border: 1px solid color-mix(in srgb, var(--feed-accent), white 42%);
+  border-radius: 50%;
+}
+
+.feed-orbit::before {
+  inset: 0.55rem;
+}
+
+.feed-orbit::after {
+  inset: 1.15rem;
+}
+
+.feed-orbit span {
+  z-index: 1;
+  color: var(--feed-accent);
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.feed-orbit i {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.28rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--feed-accent);
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--feed-accent), transparent 78%);
+}
+
+.feed-copy {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.55rem;
+}
+
+.feed-copy header {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.feed-category {
+  display: block;
+  margin-bottom: 0.23rem;
+  color: var(--feed-accent);
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.save-feed {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #7d88a2;
+  background: #f7f8fb;
+  border: 1px solid #e1e5ed;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.save-feed span[aria-hidden] {
+  font-size: 1rem;
+}
+
+.save-feed[data-selected="true"] {
+  color: #fff;
+  background: var(--feed-accent);
+  border-color: var(--feed-accent);
+}
+
+.feed-description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-bottom: 0;
+  color: #67718a;
+  font-size: 0.74rem;
+  line-height: 1.62;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.feed-copy footer {
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+.feed-meta {
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  color: #8a93a8;
+  font-size: 0.63rem;
+}
+
+.feed-likes::before {
+  margin-right: 0.25rem;
+  content: "♡";
+  color: var(--feed-accent);
+}
+
+.open-feed {
+  display: inline-flex;
+  min-height: 2.25rem;
+  padding-inline: 0.8rem;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.35rem;
+  color: #fff;
+  background: #172038;
+  border-radius: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.open-feed:hover {
+  background: var(--feed-accent);
+}
+
+.empty-state {
+  min-height: 12rem;
+  padding: 3rem 1.5rem;
+  color: #768099;
+  background: #f8f9fc;
+  border: 1px dashed #ccd3e1;
+  border-radius: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.skeleton {
+  border-color: #eceff4;
+  box-shadow: none;
+}
+
+.skeleton > i {
+  width: 5.2rem;
+  height: 5.2rem;
+  align-self: center;
+  background: #edf0f5;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton > div {
+  display: grid;
+  align-content: center;
+  gap: 0.8rem;
+}
+
+.skeleton span {
+  display: block;
+  width: 78%;
+  height: 0.6rem;
+  background: #edf0f5;
+  border-radius: 999px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton span:first-child {
+  width: 42%;
+  height: 0.9rem;
+}
+
+.skeleton span:last-child {
+  width: 58%;
+}
+
+.saved-panel .panel-head output {
+  color: #6e7891;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.saved-tray {
+  display: grid;
+  min-height: 12rem;
+  margin-top: 1.35rem;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.saved-empty {
+  display: grid;
+  min-height: 11rem;
+  padding: 1.25rem;
+  place-items: center;
+  align-content: center;
+  color: #8992a8;
+  border: 1px dashed #cbd2df;
+  border-radius: 0.9rem;
+  text-align: center;
+}
+
+.saved-empty span {
+  display: grid;
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-bottom: 0.65rem;
+  place-items: center;
+  background: white;
+  border: 1px solid #dce1eb;
+  border-radius: 50%;
+}
+
+.saved-empty p {
+  max-width: 10rem;
+  margin-bottom: 0;
+  font-size: 0.69rem;
+  line-height: 1.65;
+}
+
+.saved-card {
+  --feed-accent: #3766e8;
+  position: relative;
+  min-width: 0;
+  min-height: 4.65rem;
+  padding: 0.7rem 2rem 0.7rem 0.7rem;
+  gap: 0.6rem;
+  background: white;
+  border: 1px solid #e0e4ed;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.4rem 1rem rgb(29 42 76 / 4%);
+}
+
+.saved-mark {
+  display: grid;
+  width: 2.3rem;
+  height: 2.3rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--feed-accent);
+  background: color-mix(in srgb, var(--feed-accent), white 88%);
+  border-radius: 50%;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.saved-card > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.saved-card strong,
+.saved-card small {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.saved-card strong {
+  font-size: 0.7rem;
+}
+
+.saved-card small {
+  margin-top: 0.18rem;
+  color: #8992a8;
+  font-size: 0.57rem;
+}
+
+.saved-card a {
+  color: #2f5fe4;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.saved-card button {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.35rem;
+  padding: 0.2rem;
+  color: #9ba3b6;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.clear-saved {
+  width: 100%;
+  margin-top: 0.7rem;
+  color: #727d97;
+}
+
+.clear-saved:hover {
+  color: #2f5fe4;
+}
+
+.prose {
+  max-width: 48rem;
+  margin: 1rem auto 5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: white;
+  border: 1px solid #e0e4ed;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgb(29 42 76 / 8%);
+}
+
+.prose > h1 {
+  margin: 0.7rem 0 2.2rem;
+  font-size: 1.35rem;
+}
+
+.prose section + section {
+  margin-top: 1.8rem;
+}
+
+.prose h2 {
+  margin-bottom: 0.5rem;
+  font-size: 0.86rem;
+}
+
+.prose p {
+  margin-bottom: 0;
+  color: #626d87;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.not-found {
+  display: grid;
+  min-height: 24rem;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.not-found-dial {
+  display: grid;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-bottom: 1.2rem;
+  place-items: center;
+  color: #2f5fe4;
+  background: #edf2ff;
+  border: 1px solid #cdd9ff;
+  border-radius: 50%;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 1.4rem;
+  font-weight: 900;
+  box-shadow: 0 0 0 0.8rem #f7f9ff;
+}
+
+.not-found h1 {
+  margin-bottom: 0.7rem;
+}
+
+.return-link {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1rem;
+  color: white;
+  background: #172038;
+  border-radius: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+footer {
+  min-height: 4.5rem;
+  justify-content: space-between;
+  color: #7b849a;
+  border-top: 1px solid rgb(23 32 56 / 10%);
+  font-size: 0.7rem;
+}
+
+footer nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-feed:focus-visible,
+.dial-choice:focus-visible,
+.dial-center:focus-visible,
+.text-button:focus-visible,
+.open-feed:focus-visible,
+.saved-card a:focus-visible,
+.saved-card button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #f2b544;
+  outline-offset: 3px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 70rem) {
+  .dial-workbench {
+    grid-template-columns: minmax(18rem, 0.8fr) minmax(24rem, 1.2fr);
+  }
+
+  .saved-panel {
+    grid-column: 1 / -1;
+    border-top: 1px solid #e3e7f0;
+  }
+
+  .saved-tray {
+    min-height: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .saved-empty {
+    grid-column: 1 / -1;
+    min-height: 6rem;
+  }
+}
+
+@media (max-width: 47rem) {
+  .site-header,
+  footer,
+  main {
+    width: min(100% - 1rem, 44rem);
+  }
+
+  .site-header {
+    min-height: 3.5rem;
+  }
+
+  .site-header nav {
+    gap: 0.65rem;
+  }
+
+  .site-header nav > a:last-child {
+    display: none;
+  }
+
+  .dial-workbench {
+    min-height: 0;
+    border-radius: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .dial-panel,
+  .result-panel,
+  .saved-panel {
+    padding: 1rem;
+  }
+
+  .result-panel {
+    border-right: 0;
+    border-top: 1px solid #e3e7f0;
+  }
+
+  .category-dial {
+    width: min(19.2rem, 100%);
+    margin-block: 1.4rem 1rem;
+  }
+
+  .dial-choice {
+    width: 3.65rem;
+    min-height: 2.65rem;
+  }
+
+  .dial-choice b {
+    font-size: 0.58rem;
+  }
+
+  .dial-center {
+    width: 4.55rem;
+    height: 4.55rem;
+  }
+
+  .feed-card {
+    min-height: 11rem;
+    padding: 0.9rem;
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .feed-orbit {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .feed-orbit::before {
+    inset: 0.45rem;
+  }
+
+  .feed-orbit::after {
+    inset: 0.92rem;
+  }
+
+  .feed-copy footer {
+    align-items: flex-end;
+  }
+
+  .feed-meta {
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .open-feed {
+    min-height: 2.1rem;
+    padding-inline: 0.65rem;
+    font-size: 0.64rem;
+  }
+
+  .saved-tray {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    padding-block: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
